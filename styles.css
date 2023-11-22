@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#taskForm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskForm input,
+#taskForm select,
+#taskForm button {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#taskForm input:focus,
+#taskForm select:focus,
+#taskForm button:focus {
+    border-color: #4caf50;
+}
+
+#tasks {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    cursor: grab;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.task:hover {
+    background-color: #f0f0f0;
+}
+
+.task.dragging {
+    opacity: 0.5;
+}
+
+.task input {
+    margin-right: 10px;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task.low-priority {
+    border-left: 5px solid #4caf50;
+}
+
+.task.medium-priority {
+    border-left: 5px solid #ffc107;
+}
+
+.task.high-priority {
+    border-left: 5px solid #f44336;
+}
+
+button {
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3f9142;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+select:hover {
+    border-color: #4caf50;
+}
+
+select:focus {
+    border-color: #4caf50;
+}
+
+#filter {
+    margin-left: 5px;
+}
+
+@media (max-width: 500px) {
+    #taskForm {
+        flex-direction: column;
+    }
+
+    #taskForm input,
+    #taskForm select,
+    #taskForm button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

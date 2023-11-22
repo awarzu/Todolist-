@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Advanced Todo List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Todo List</h1>
+        <div id="taskForm">
+            <input type="text" id="taskInput" placeholder="Add a new task..." autocomplete="off">
+            <input type="date" id="dueDate">
+            <select id="priority">
+                <option value="1">Low Priority</option>
+                <option value="2">Medium Priority</option>
+                <option value="3">High Priority</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <div id="taskFilters">
+            <label>Show:
+                <select id="filter">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                    <option value="today">Due Today</option>
+                    <option value="upcoming">Upcoming</option>
+                </select>
+            </label>
+        </div>
+        <div id="tasks" class="sortable">
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
